@@ -1,17 +1,7 @@
 Predict Future Sales
 ======================
-This is my solution to the problem posted as part of the kaggle comp [![Total Downloads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
-[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
+This is my solution to the problem posted as part of the  [kaggle compeition on predicting futures sales.](https://www.kaggle.com/c/competitive-data-science-predict-future-sales)
 
-:star: Star us on GitHub — it helps!
-
-[Aimeos](https://aimeos.org/TYPO3) is THE professional, full-featured and
-high performance e-commerce extension for TYPO3!  You can install it in your
-existing TYPO3 web site within 5 minutes and can adapt, extend, overwrite
-and customize anything to your needs.
-
-[![Aimeos TYPO3 demo](https://aimeos.org/fileadmin/user_upload/typo3-demo.jpg)](http://typo3.demo.aimeos.org/)
 
 ## Table of content
 
@@ -32,10 +22,10 @@ and customize anything to your needs.
 
 This document is for the latest Aimeos TYPO3 **18.10 release and later**.
 
-- Stable release: 19.4 (TYPO3 7/8/9 LTS)
+- Stable release: 19.4 (TYPO3 7/8/9 LTS) 
 - LTS release: 18.10 (TYPO3 7/8/9 LTS)
 
-### TYPO3 extension repository
+### TYPO3 extension repository 
 
 If you want to install Aimeos into your existing TYPO3 installation, the [Aimeos extension from the TER](https://typo3.org/extensions/repository/view/aimeos) is recommended. You can download and install it directly from the Extension Manager of your TYPO3 instance.
 
