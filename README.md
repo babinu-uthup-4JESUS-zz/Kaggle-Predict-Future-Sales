@@ -2,15 +2,15 @@ Predict Future Sales
 ======================
 This is my solution to the problem posted as part of the  [kaggle compeition on predicting futures sales.](https://www.kaggle.com/c/competitive-data-science-predict-future-sales)
 
+ ![image](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/rel_images/kaggle_comp.png)
 
 ## Table of content
 
-- [Installation](#installation)
-    - [TER](#typo3-extension-repository)
-    - [Composer](#composer)
-- [TYPO3 setup](#typo3-setup)
-    - [Extension](#extension)
-    - [Database](#database)
+- [Overview](#overview)
+- [Data](#data)
+    - [Data Description](#data-description)
+    - [File Descriptions](#file-descriptions)
+    - [Data Fields](#data-fields)    
 - [Page setup](#page-setup)
     - [Upload the page tree file](#upload-the-page-tree-file)
     - [Go to the import view](#go-to-the-import-view)
@@ -18,107 +18,42 @@ This is my solution to the problem posted as part of the  [kaggle compeition on 
 - [License](#license)
 - [Links](#links)
 
-## Installation
+## Overview
 
-This document is for the latest Aimeos TYPO3 **18.10 release and later**.
+We have the following problem description from it's [corresponding kaggle competition link](https://www.kaggle.com/c/competitive-data-science-predict-future-sales/overview/description) :
+>In this competition you will work with a challenging time-series dataset consisting of daily sales data, kindly provided by one of the largest Russian software firms - 1C Company. We are asking you to predict total sales for every product and store in the next month. By solving this competition you will be able to apply and enhance your data science skills.
 
-- Stable release: 19.4 (TYPO3 7/8/9 LTS) 
-- LTS release: 18.10 (TYPO3 7/8/9 LTS)
+## Data
 
-### TYPO3 extension repository 
+All the information pasted in this section has been obtained from the [webpage showing data related information of the corresponding kaggle competition](https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data)
 
-If you want to install Aimeos into your existing TYPO3 installation, the [Aimeos extension from the TER](https://typo3.org/extensions/repository/view/aimeos) is recommended. You can download and install it directly from the Extension Manager of your TYPO3 instance.
 
-For new TYPO3 installations, there's a 1-click [Aimeos distribution](https://typo3.org/extensions/repository/view/aimeos_dist) available too. Choose the Aimeos distribution from the list of available distributions in the Extension Manager and you will get a completely set up shop system including demo data for a quick start.
+### Data Description
 
-### Composer
+You are provided with daily historical sales data. The task is to forecast the total amount of products sold in every shop for the test set. Note that the list of shops and products slightly changes every month. Creating a robust model that can handle such situations is part of the challenge.
 
-The latest version can be installed via composer too. This is especially useful if you want to create new TYPO3 installations automatically or play with the latest code. You need to install the [composer](https://getcomposer.org/) package first if it isn't already available:
-```
-php -r "readfile('https://getcomposer.org/installer');" | php -- --filename=composer
-```
+### File Descriptions
 
-In order to tell composer what it should install, you have to create a basic `composer.json` file in the directory of you VHost. It should look similar to this one:
-```json
-{
-    "name": "vendor/mysite",
-    "description" : "My new TYPO3 web site",
-    "require": {
-        "typo3/cms": "~8.7",
-        "aimeos/aimeos-typo3": "~19.4"
-    },
-    "extra": {
-        "typo3/cms": {
-            "cms-package-dir": "{$vendor-dir}/typo3/cms",
-            "web-dir": "public"
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "Aimeos\\Aimeos\\Custom\\Composer::install"
-        ],
-        "post-update-cmd": [
-            "Aimeos\\Aimeos\\Custom\\Composer::install"
-        ]
-    }
-}
-```
-It will install TYPO3 and the latest Aimeos TYPO3 extension in the `./public/` directory. Afterwards, the Aimeos composer script will be executed which copies some required files and adds a link to the Aimeos extensions placed in the `./ext/` directory. To start installation, execute composer on the command line in the directory where your `composer.json` is stored:
-```
-composer update
-```
+sales_train.csv - the training set. Daily historical data from January 2013 to October 2015.
+test.csv - the test set. You need to forecast the sales for these shops and products for November 2015.
+sample_submission.csv - a sample submission file in the correct format.
+items.csv - supplemental information about the items/products.
+item_categories.csv  - supplemental information about the items categories.
+shops.csv- supplemental information about the shops.
 
-## TYPO3 setup
+### Data fields
 
-### Database setup
-
-Starting with Aimeos 18.10 and TYPO3 9.5, it's possible to define the charset and collation for newly created MySQL tables. In case you want to use a NoSQL data store like ElasticSearch for Aimeos products, you need to use a binary collation `utf8mb4_bin` in your `typo3conf/LocalConfiguration.php` file **before** the tables are created:
-
-```
-'DB' => [
-    'Connections' => [
-        'Default' => [
-            'tableoptions' => [
-                'charset' => 'utf8mb4',
-                'collate' => 'utf8mb4_bin',
-            ],
-            // ...
-        ],
-    ],
-],
-```
-
-**Caution:** If you use MySQL < 5.7, you have to use `utf8` and `utf8_bin` instead because those MySQL versions can't handle the long indexes created by `utf8mb4` (up to four bytes per character) and you will get errors like `1071 Specified key was too long; max key length is 767 bytes`:
-
-```
-'DB' => [
-    'Connections' => [
-        'Default' => [
-            'tableoptions' => [
-                'charset' => 'utf8',
-                'collate' => 'utf8_bin',
-            ],
-            // ...
-        ],
-    ],
-],
-```
-
-### Extension
-
-* Log into the TYPO3 back end
-* Click on ''Admin Tools::Extension Manager'' in the left navigation
-* Click the icon with the little plus sign left from the Aimeos list entry (looks like a lego brick)
-
-**Caution:** Install the **RealURL extension before the Aimeos extension** to get nice looking URLs. Otherwise, RealURL doesn't rewrite the parameters even if you install RealURL afterwards!
-
-![Install Aimeos TYPO3 extension](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-install.png)
-
-### Database
-
-Afterwards, you have to execute the update script of the extension to create the required database structure:
-
-![Execute update script](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-update-7.x.png)
+ID - an Id that represents a (Shop, Item) tuple within the test set
+shop_id - unique identifier of a shop
+item_id - unique identifier of a product
+item_category_id - unique identifier of item category
+item_cnt_day - number of products sold. You are predicting a monthly amount of this measure
+item_price - current price of an item
+date - date in format dd/mm/yyyy
+date_block_num - a consecutive month number, used for convenience. January 2013 is 0, February 2013 is 1,..., October 2015 is 33
+item_name - name of item
+shop_name - name of shop
+item_category_name - name of item category
 
 ## Page setup
 
