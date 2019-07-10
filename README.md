@@ -62,7 +62,7 @@ You are provided with daily historical sales data. The task is to forecast the t
 
 ## Approach
 
-The page setup for an Aimeos web shop is easy if you import the [standard page tree for TYPO3 8.7/9.5](https://aimeos.org/docs/TYPO3/Install_Aimeos/Setup_pages#Download) into your TYPO3 installation.
+The approach is to have a thorough look at the data, validate the same and try out relevant modeling techiniques. 
 
 ### Data Analysis and Validation
 
