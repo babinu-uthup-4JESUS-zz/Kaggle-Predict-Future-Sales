@@ -11,8 +11,8 @@ This is my solution to the problem posted as part of the  [kaggle competition on
     - [Data Description](#data-description)
     - [File Descriptions](#file-descriptions)
     - [Data Fields](#data-fields)    
-- [Page setup](#page-setup)
-    - [Upload the page tree file](#upload-the-page-tree-file)
+- [Approach](#approach)
+    - [Data Analysis and Validation](#data-analysis-and-validation)
     - [Go to the import view](#go-to-the-import-view)
     - [Import the uploaded page tree file](#import-the-uploaded-page-tree-file)
 - [License](#license)
@@ -48,23 +48,23 @@ You are provided with daily historical sales data. The task is to forecast the t
 
 ### Data fields
 
-ID - an Id that represents a (Shop, Item) tuple within the test set
-shop_id - unique identifier of a shop
-item_id - unique identifier of a product
-item_category_id - unique identifier of item category
-item_cnt_day - number of products sold. You are predicting a monthly amount of this measure
-item_price - current price of an item
-date - date in format dd/mm/yyyy
-date_block_num - a consecutive month number, used for convenience. January 2013 is 0, February 2013 is 1,..., October 2015 is 33
-item_name - name of item
-shop_name - name of shop
-item_category_name - name of item category
+- ID - an Id that represents a (Shop, Item) tuple within the test set
+- shop_id - unique identifier of a shop
+- item_id - unique identifier of a product
+- item_category_id - unique identifier of item category
+- item_cnt_day - number of products sold. You are predicting a monthly amount of this measure
+- item_price - current price of an item
+- date - date in format dd/mm/yyyy
+- date_block_num - a consecutive month number, used for convenience. January 2013 is 0, February 2013 is 1,..., October 2015 is 33
+- item_name - name of item
+- shop_name - name of shop
+- item_category_name - name of item category
 
-## Page setup
+## Approach
 
 The page setup for an Aimeos web shop is easy if you import the [standard page tree for TYPO3 8.7/9.5](https://aimeos.org/docs/TYPO3/Install_Aimeos/Setup_pages#Download) into your TYPO3 installation.
 
-### Go to the import view
+### Data Analysis and Validation
 
 * In Web::Page, root page (the one with the globe)
 * Right click on the globe
