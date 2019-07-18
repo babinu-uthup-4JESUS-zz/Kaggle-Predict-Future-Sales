@@ -66,6 +66,13 @@ The approach is to have a thorough look at the data, validate the same and try o
 
 ### Data Analysis and Validation
 
+This has been carried out in [data_sanity_check.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/data_sanity_check/data_sanity_check.ipynb). To summarize, we have done the following :
+
+- Data sanity test - to make sure that we do not have unexpected input
+- Conversion to monthly data - to facilitate easier data processing in the future
+- Evaluation of a simple past average model - to serve as a benchmark for later models.
+
+
 * In Web::Page, root page (the one with the globe)
 * Right click on the globe
 * Move the cursor to "Branch actions"
