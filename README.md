@@ -12,7 +12,7 @@ This is my solution to the problem posted as part of the  [kaggle competition on
     - [File Descriptions](#file-descriptions)
     - [Data Fields](#data-fields)    
 - [Approach](#approach)
-    - [Data Analysis and Validation](#data-analysis-and-validation)
+    - [Data Validation](#data-validation)
     - [Go to the import view](#go-to-the-import-view)
     - [Import the uploaded page tree file](#import-the-uploaded-page-tree-file)
 - [License](#license)
@@ -64,7 +64,7 @@ You are provided with daily historical sales data. The task is to forecast the t
 
 The approach is to have a thorough look at the data, validate the same and try out relevant modeling techiniques. 
 
-### Data Analysis and Validation
+### Data Validation
 
 This has been carried out in [data_sanity_check.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/data_sanity_check/data_sanity_check.ipynb). To summarize, we have done the following :
 
