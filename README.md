@@ -74,7 +74,7 @@ This has been carried out in [data_sanity_check.ipynb](https://github.com/babinu
 
 ### Building simple models
 
-This has been carried out in [data_analysis_and_models.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/data_sanity_check/data_analysis_and_models.ipynb). I am summarizing the models briefly below :
+This has been carried out in [data_analysis_and_models.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/data_analysis_and_models/data_analysis_and_models.ipynb). I am summarizing the models briefly below :
 
 - Model 1 - take the value of the previous month for the corresponding shop and item if present, 1 if absent (Score : 2.37) .
 - Model 2 - take the value of the most recent month in the past if available, 1 if not (Score : 2.42).
