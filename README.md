@@ -13,7 +13,7 @@ This is my solution to the problem posted as part of the  [kaggle competition on
     - [Data Fields](#data-fields)    
 - [Approach](#approach)
     - [Data Validation](#data-validation)
-    - [Go to the import view](#go-to-the-import-view)
+    - [Building simple models](#building-simple-models)
     - [Import the uploaded page tree file](#import-the-uploaded-page-tree-file)
 - [License](#license)
 - [Links](#links)
@@ -72,7 +72,17 @@ This has been carried out in [data_sanity_check.ipynb](https://github.com/babinu
 - Conversion to monthly data - to facilitate easier data processing in the future.
 - Evaluation of a simple past average model - to serve as a benchmark for later models.
 
-### Upload the page tree file
+### Building simple models
+
+This has been carried out in [data_analysis_and_models.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/data_sanity_check/data_analysis_and_models.ipynb). I am summarizing the models briefly below :
+
+- Model 1 - take the value of the previous month for the corresponding shop and item if present, 1 if absent (Score : 2.37) .
+- Model 2 - take the value of the most recent month in the past if available, 1 if not (Score : 2.42).
+- Model 3 - bayesian model which takes 1 as the prior and historical value for the most recent month as the posterior, and combines the same using recency weighting (Score : 2.37).
+- Model 4 - take the average of the previous month for the corresponding shop and item if present, the average of the item across different shops for the previous month if absent. If both of these are unavaible, value is set to 1 (Score : 2.71).
+
+Thus, though Model 3 was marginally better than the rest, Model 1 score in terms of simplicity.
+
 
 * In the page import dialog
 * Select the "Upload" tab (2nd one)
