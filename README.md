@@ -14,7 +14,9 @@ This is my solution to the problem posted as part of the  [kaggle competition on
 - [Approach](#approach)
     - [Data Validation](#data-validation)
     - [Building simple models](#building-simple-models)
-    - [Import the uploaded page tree file](#import-the-uploaded-page-tree-file)
+- [More Complex models](#more-complex-models)
+    - [Gradient boosting using tensorflow](#gradient-boosting-using-tensorflow)
+    - [Building simple models](#building-simple-models)
 - [License](#license)
 - [Links](#links)
 
@@ -92,18 +94,12 @@ Thus, though Model 3 was marginally better than the rest, Model 1 score in terms
 
 ![Upload the page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-upload.png)
 
-### Import the uploaded page tree file
+## More Complex models
 
-* In Import / Export view
-* Select the uploaded file from the drop-down menu
-* Click on the "Preview" button
-* The pages that will be imported are shown below
-* Click on the "Import" button that has appeared
-* Confirm to import the pages
+In this section, we go ahead with using more complex model architectures such as gradient boosting, random forest and so on.
 
-![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
-
-Now you have a new page "Shop" in your page tree including all required sub-pages.
+### Gradient boosting using tensorflow
+This has been done in [gradient_boosting_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_tensorflow.ipynb). It does look to offer much benefit as the best score which we were able to obtain was 2.61.
 
 ## License
 
