@@ -16,7 +16,7 @@ This is my solution to the problem posted as part of the  [kaggle competition on
     - [Building simple models](#building-simple-models)
 - [More Complex models](#more-complex-models)
     - [Gradient boosting using tensorflow](#gradient-boosting-using-tensorflow)
-    - [Building simple models](#building-simple-models)
+    - [Gradient boosting using xgboost](#gradient-boosting-using-xgboost)
 - [License](#license)
 - [Links](#links)
 
@@ -85,21 +85,15 @@ This has been carried out in [data_analysis_and_models.ipynb](https://github.com
 
 Thus, though Model 3 was marginally better than the rest, Model 1 score in terms of simplicity.
 
-
-* In the page import dialog
-* Select the "Upload" tab (2nd one)
-* Click on the "Select" dialog
-* Choose the file you've downloaded
-* Press the "Upload files" button
-
-![Upload the page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-upload.png)
-
 ## More Complex models
 
 In this section, we go ahead with using more complex model architectures such as gradient boosting, random forest and so on.
 
 ### Gradient boosting using tensorflow
-This has been done in [gradient_boosting_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_tensorflow.ipynb). It does look to offer much benefit as the best score which we were able to obtain was 2.61.
+This has been done in [gradient_boosting_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_tensorflow.ipynb). It does not look to offer much benefit as the best score which we were able to obtain was 2.61.
+
+### Gradient boosting using xgboost
+This has been done in [gradient_boosting_xgboost.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_xgboost.ipynb). It gave us a reasonably good improvement as we got a score of 2.07 on the validation set.
 
 ## License
 
