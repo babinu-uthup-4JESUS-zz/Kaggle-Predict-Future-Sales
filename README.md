@@ -98,10 +98,10 @@ This has been done in [gradient_boosting_tensorflow.ipynb](https://github.com/ba
 This has been done in [gradient_boosting_xgboost.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_xgboost.ipynb). It gave us a reasonably good improvement as we got a score of 2.27 on the validation set.
 
 ### DNN using tensorflow
-This has been done in [dnn_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/dnn_tensorflow.ipynb). It did not help much and gave a mediocre score of 2.55 (NOTE: Since this method involved more processing, this was as part of [kaggle kernels](https://www.kaggle.com/babinu/predict-sales-tensorflow?scriptVersionId=18812195).
+This has been done in [dnn_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/dnn_tensorflow.ipynb). It did not help much and gave a mediocre score of 2.60 (NOTE: Since this method involved more processing, this was as part of [kaggle kernels](https://www.kaggle.com/babinu/predict-sales-tensorflow?scriptVersionId=20825161).
 
 ### Addition of new variables to the xgboost method
-This has been done in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_using_xgboost_new_variables.ipynb). This gave us some improvement to 1.96 and was run as part of  [kaggle kernels](https://www.kaggle.com/babinu/gradient-boosting-using-xgboost-new-variables?scriptVersionId=19188010) to improve the running speed.
+This has been done in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/gradient_boosting_using_xgboost_new_variables.ipynb). This gave us some improvement to 2.15 and was run as part of  [kaggle kernels](https://www.kaggle.com/babinu/gradient-boosting-using-xgboost-new-variables?scriptVersionId=20826601) to improve the running speed.
 
 ## License
 
