@@ -95,7 +95,7 @@ In this section, we go ahead with using more complex model architectures such as
 This has been done in [gradient_boosting_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_tensorflow.ipynb). It does not look to offer much benefit as the best score which we were able to obtain was 2.61.
 
 ### Gradient boosting using xgboost
-This has been done in [gradient_boosting_xgboost.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_xgboost.ipynb). It gave us a reasonably good improvement as we got a score of 2.07 on the validation set.
+This has been done in [gradient_boosting_xgboost.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/gradient_boosting_xgboost.ipynb). It gave us a reasonably good improvement as we got a score of 2.27 on the validation set.
 
 ### DNN using tensorflow
 This has been done in [dnn_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/dnn_tensorflow.ipynb). It did not help much and gave a mediocre score of 2.55 (NOTE: Since this method involved more processing, this was as part of [kaggle kernels](https://www.kaggle.com/babinu/predict-sales-tensorflow?scriptVersionId=18812195).
