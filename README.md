@@ -104,7 +104,7 @@ This has been done in [dnn_tensorflow.ipynb](https://github.com/babinu-uthup-4JE
 This has been done in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/gradient_boosting_using_xgboost_new_variables.ipynb). This gave us some improvement to 2.15 and was run as part of  [kaggle kernels](https://www.kaggle.com/babinu/gradient-boosting-using-xgboost-new-variables?scriptVersionId=20826601) to improve the running speed.
 
 ### LSTM using keras
-This has been done in [lstm_keras.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/lstm_keras.ipynb). It did not help much and gave a mediocre score of 2.60 (NOTE: Since this method involved more processing, this was as part of [kaggle kernels](https://www.kaggle.com/babinu/lstm-keras?scriptVersionId=20831177).
+This has been done in [lstm_keras.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/lstm_keras.ipynb). It did not help much and gave a mediocre score of 2.27 (NOTE: Since this method involved more processing, this was as part of [kaggle kernels](https://www.kaggle.com/babinu/lstm-keras?scriptVersionId=20831177).
 
 ## License
 
