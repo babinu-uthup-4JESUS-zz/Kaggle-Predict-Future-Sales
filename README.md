@@ -106,6 +106,10 @@ This has been done in [gradient_boosting_using_xgboost_new_variables.ipynb](http
 ### LSTM using keras
 This has been done in [lstm_keras.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/lstm_keras.ipynb). It did not help much and gave a mediocre score of 2.27 (NOTE: Since this method involved more processing, this was as part of [kaggle kernels](https://www.kaggle.com/babinu/lstm-keras?scriptVersionId=20831177).
 
+### Xgboost on all previous months' data
+This has been done in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/gradient_boosting_using_xgboost_new_variables.ipynb). This did not give us much of improvement as the score remained at 2.24 and was run as part of  [kaggle kernels](https://www.kaggle.com/babinu/gradient-boosting-add-item-category-average?scriptVersionId=21090751) to improve the running speed.
+
+
 ## License
 
 The Aimeos TYPO3 extension is licensed under the terms of the GPL Open Source
