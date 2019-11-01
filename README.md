@@ -22,6 +22,7 @@ This is my solution to the problem posted as part of the  [kaggle competition on
 - [Important note regarding creation of training and validaion sets](#important-note-regarding-creation-of-training-and-validaion-sets)
     - [Gradient_boosting_on_new_dataset](#gradient-boosting-on-new_dataset)
     - [DNN_on_new_dataset](#dnn-on-new_dataset)
+- [Final-conclusion](#final-conclusion)
 
 ## Overview
 
@@ -122,3 +123,5 @@ This has been done in [xgboost_final_full_features.ipynb](https://github.com/bab
 ### DNN on new dataset
 This has been done in [dnn_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/dnn_tensorflow.ipynb). 
 
+## Final Conclusion
+To conclude, the major breakthrough in this project came when we  enlarged the dataset to include all corresponding shop_id,item_id combinations for any particular month. Once the dataset was enlarged, a gradient boosting model with appropriate features trained over this produced the best results (with a test set error of approximately 0.973).
