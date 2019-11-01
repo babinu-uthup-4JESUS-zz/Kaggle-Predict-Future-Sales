@@ -4,3 +4,4 @@ data_sanity_check/.ipynb_checkpoints
 data_analysis_and_models/.ipynb_checkpoints
 sample_model_metadata
 .ipynb_checkpoints
+more_complex_models/*.csv
