@@ -19,8 +19,9 @@ This is my solution to the problem posted as part of the  [kaggle competition on
     - [Gradient boosting using xgboost](#gradient-boosting-using-xgboost)
     - [DNN using tensorflow](#dnn-using-tensorflow)    
     - [Addition of new variables to the xgboost method](#addition-of-new-variables-to-the-xgboost-method)
-- [License](#license)
-- [Links](#links)
+- [Important note regarding creation of training and validaion sets](#important-note-regarding-creation-of-training-and-validaion-sets)
+    - [Gradient_boosting_on_new_dataset](#gradient-boosting-on-new_dataset)
+    - [DNN_on_new_dataset](#dnn-on-new_dataset)
 
 ## Overview
 
@@ -109,16 +110,15 @@ This has been done in [lstm_keras.ipynb](https://github.com/babinu-uthup-4JESUS/
 ### Xgboost on all previous months' data
 This has been done in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/gradient_boosting_using_xgboost_new_variables.ipynb). This did not give us much of improvement as the score remained at 2.24 and was run as part of  [kaggle kernels](https://www.kaggle.com/babinu/gradient-boosting-add-item-category-average?scriptVersionId=21090751) to improve the running speed.
 
+## Important note regarding creation of training and validaion sets
 
-## License
+As illustrated in the [following kaggle kernel](https://www.kaggle.com/dlarionov/feature-engineering-xgboost), things really improve if you include entries for all combinations of shop_id, item_id for a particular month to the data(that is if you have 2 shop_id's and 2 item_id's for a particular month and there is a non zero entry for only 1 shop_id, item_id combination(amongst the four), we can add zero entries for the other 3 shop_id, item_id combinations to the data). Once ,we enlarge the data set in this manner and set the last month as the validation set( and the previous months as the training set), we see that the model trains and performs pretty well.
 
-The Aimeos TYPO3 extension is licensed under the terms of the GPL Open Source
-license and is available for free.
+The sections below describes how different modeling techniques performed on this new enlarged data set.
 
-## Links
+### Gradient boosting on new dataset 
+This has been done in [xgboost_final_full_features.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/xgboost_final_full_features.ipynb). The validation error reduces to around 0.917
 
-* [Web site](https://aimeos.org/integrations/typo3-shop-extension/)
-* [Documentation](https://aimeos.org/docs/TYPO3)
-* [Forum](https://aimeos.org/help/typo3-extension-f16/)
-* [Issue tracker](https://github.com/aimeos/aimeos-typo3/issues)
-* [Source code](https://github.com/aimeos/aimeos-typo3)
+### DNN on new dataset
+This has been done in [dnn_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/dnn_tensorflow.ipynb). 
+
