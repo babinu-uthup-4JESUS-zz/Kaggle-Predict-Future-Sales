@@ -118,7 +118,7 @@ This has been implemented in [gradient_boosting_using_xgboost_new_variables.ipyn
 
 ## Important note regarding creation of training and validation sets
 
-As illustrated in the [following kaggle kernel](https://www.kaggle.com/dlarionov/feature-engineering-xgboost), performance of  models really improve if the trained data is augmented by adding entries for all combinations of shop_id, item_id for a particular month (that is if the data has 2 shop_id's and 2 item_id's for a particular month, but has a non zero entry for only 1 shop_id, item_id combination(amongst the four), zero entries for the other 3 shop_id, item_id combinations can be appended to the data). Once , the data set is enlarged in this manner and the data for the last month is set as the validation set, and the data corresponding to the previous months as the training set, we see that the model trains and performs pretty well.
+As illustrated in the [following kaggle kernel](https://www.kaggle.com/dlarionov/feature-engineering-xgboost), performance of  models really improve if trained data is augmented by adding entries for all combinations of shop_id, item_id for a particular month (that is if the data has 2 shop_id's and 2 item_id's for a particular month, but has a non zero entry for only 1 shop_id, item_id combination(amongst the four), zero entries for the other 3 shop_id, item_id combinations can be appended to the data). Once, the data set is enlarged in this manner and the data for the last month is set as the validation set, and the data corresponding to the previous months as the training set, we see that the model trains and performs pretty well.
 
 The sections below describes how different modeling techniques performed on this new enlarged data set.
 
