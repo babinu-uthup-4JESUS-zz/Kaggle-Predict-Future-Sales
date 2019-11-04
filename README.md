@@ -31,7 +31,7 @@ We have the following problem description from it's [corresponding kaggle compet
 
 ## Data
 
-All the information pasted in this section has been obtained from the [this webpage (whichs shows data related information of the corresponding kaggle competition).](https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data)
+All the information pasted in this section has been obtained from the [this webpage (which shows data related information of the corresponding kaggle competition).](https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data)
 
 
 ### Data Description
@@ -87,7 +87,7 @@ This has been carried out in [data_analysis_and_models.ipynb](https://github.com
 - Model 3 - bayesian model which takes 1 as the prior and historical value for the most recent month as the posterior, and 
             combines the same using recency weighting (Score : 2.37).
 - Model 4 - take the average of the previous month for the corresponding shop and item if present, the average of the item 
-            across different shops for the previous month if absent. If both of these are unavaible, value is set to 1 (Score 
+            across different shops for the previous month if absent. If both of these are unavailable, value is set to 1 (Score 
             : 2.71).
 
 Thus, though Model 3 was marginally better than the rest, Model 1 score in terms of simplicity.
@@ -108,17 +108,17 @@ This has been implemented in [gradient_boosting_xgboost.ipynb](https://github.co
 This has been implemented in [dnn_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/dnn_tensorflow.ipynb). It did not help much and gave a mediocre score of 2.60 (NOTE: Since this method involved more processing, this was executed as a [kaggle kernel](https://www.kaggle.com/babinu/predict-sales-tensorflow?scriptVersionId=20825161)).
 
 ### Addition of new variables to the xgboost method
-This has been implemented in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/gradient_boosting_using_xgboost_new_variables.ipynb). This gave us some improvement to 2.15 and was run as a [kaggle kernel](https://www.kaggle.com/babinu/gradient-boosting-using-xgboost-new-variables?scriptVersionId=20826601) to improve running speed.
+This has been implemented in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/gradient_boosting_using_xgboost_new_variables.ipynb). This gave us some improvement to 2.15 and was executed as a [kaggle kernel](https://www.kaggle.com/babinu/gradient-boosting-using-xgboost-new-variables?scriptVersionId=20826601) to improve running speed.
 
 ### LSTM using keras
-This has been implemented in [lstm_keras.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/lstm_keras.ipynb). It did not help much and gave a mediocre score of 2.27 (NOTE: Since this method involved more processing, this was executed as [kaggle kernel](https://www.kaggle.com/babinu/lstm-keras?scriptVersionId=20831177).
+This has been implemented in [lstm_keras.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/lstm_keras.ipynb). It did not help much and gave a mediocre score of 2.27 (NOTE: Since this method involved more processing, this was executed as [kaggle kernel](https://www.kaggle.com/babinu/lstm-keras?scriptVersionId=20831177)).
 
 ### Xgboost on all previous months' data
-This has been implemented in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/gradient_boosting_using_xgboost_new_variables.ipynb). This did not give us much of improvement as the score remained at 2.24 and was executed as a [kaggle kernel](https://www.kaggle.com/babinu/gradient-boosting-add-item-category-average?scriptVersionId=21090751) to improve the running speed.
+This has been implemented in [gradient_boosting_using_xgboost_new_variables.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/more_complex_models/gradient_boosting_using_xgboost_new_variables.ipynb). This did not give us much of improvement as the score remained at 2.24 and was executed as a [kaggle kernel](https://www.kaggle.com/babinu/gradient-boosting-add-item-category-average?scriptVersionId=21090751) to improve running speed.
 
-## Important note regarding creation of training and validaion sets
+## Important note regarding creation of training and validation sets
 
-As illustrated in the [following kaggle kernel](https://www.kaggle.com/dlarionov/feature-engineering-xgboost), performance of trained models really improve if you include entries for all combinations of shop_id, item_id for a particular month to the data(that is if you have 2 shop_id's and 2 item_id's for a particular month and there is a non zero entry for only 1 shop_id, item_id combination(amongst the four), we can add zero entries for the other 3 shop_id, item_id combinations to the data). Once ,we enlarge the data set in this manner and set the data for the last month as the validation set( and date corresponding to the previous months as the training set), we see that the model trains and performs pretty well.
+As illustrated in the [following kaggle kernel](https://www.kaggle.com/dlarionov/feature-engineering-xgboost), performance of  models really improve if the trained data is augmented by adding entries for all combinations of shop_id, item_id for a particular month (that is if the data has 2 shop_id's and 2 item_id's for a particular month, but has a non zero entry for only 1 shop_id, item_id combination(amongst the four), zero entries for the other 3 shop_id, item_id combinations can be appended to the data). Once , the data set is enlarged in this manner and the data for the last month is set as the validation set, and the data corresponding to the previous months as the training set, we see that the model trains and performs pretty well.
 
 The sections below describes how different modeling techniques performed on this new enlarged data set.
 
@@ -129,4 +129,4 @@ This has been implemented in [xgboost_final_full_features.ipynb](https://github.
 This has been implemented in [dnn_tensorflow.ipynb](https://github.com/babinu-uthup-4JESUS/Kaggle-Predict-Future-Sales/blob/master/dnn_tensorflow.ipynb).  The validation error came out to be around 1.15.
 
 ## Final Conclusion
-To conclude, the major breakthrough in this project came when we  enlarged the dataset to include all corresponding shop_id,item_id combinations for any particular month. Once the dataset was enlarged, a gradient boosting model with appropriate features trained over this dataset produced the best result (with a test set error of approximately 0.973).
+To conclude, the major breakthrough in this project, was not any particular modeling technique, but rather the enlargement of dataset to include more shop_id, item_id combinations. Once the dataset was enlarged in this manner, a gradient boosting model with appropriate features trained over the same produced the best results with a validation error of 0.917 and a test set error of approximately 0.973.
